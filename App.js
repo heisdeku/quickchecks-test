@@ -1,17 +1,14 @@
 import React from 'react';
-import {SafeAreaView, ScrollView, StatusBar, Text, View} from 'react-native';
+import {SafeAreaView, ScrollView, StatusBar} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
+import RootStack from './src/stacks/Root';
 
 const App = () => {
   return (
     <NavigationContainer>
-      <SafeAreaView>
+      <SafeAreaView style={{flex: 1}}>
         <StatusBar barStyle={'light-content'} />
-        <ScrollView contentInsetAdjustmentBehavior="automatic">
-          <View>
-            <Text>Quick Checks React Native Test</Text>
-          </View>
-        </ScrollView>
+        <RootStack />
       </SafeAreaView>
     </NavigationContainer>
   );
